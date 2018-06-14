@@ -20,6 +20,16 @@ html, body {
 	background-size: cover;
 }
 
+#logo {
+	font-size: 3em;
+	font-family: "ITCEras";
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: white;
+}
+
+
 /* Loading Screen */
 #loadingScreen {
 	position: relative;
@@ -45,7 +55,7 @@ html, body {
 /* Search Screen */
 #searchScreen {
 	position: relative;
-	top: 300px;
+	top: 250px;
 	color: #162b89;
 	margin: auto;
 	max-width: 500px;
@@ -64,7 +74,7 @@ html, body {
 #searchScreen button {
 	position: relative;
 	top: 30px;
-	left: 50%;
+	left: 47.5%;
 	padding: 0;
 	color: #162b89;
 	border: none;

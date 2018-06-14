@@ -5,6 +5,7 @@ var aeria;
         loadingScreen();
     }
     function loadingScreen() {
+        document.getElementById("logo").style.display = "none";
         let loadingScreen = document.createElement("div");
         loadingScreen.setAttribute("id", "loadingScreen");
         loadingScreen.innerHTML = "<p>aeria</p>";
@@ -14,6 +15,7 @@ var aeria;
     }
     function searchScreen() {
         document.getElementById("loadingScreen").style.display = "none";
+        document.getElementById("logo").style.display = "block";
         let search = document.createElement("input");
         search.setAttribute("type", "text");
         search.setAttribute("placeholder", "Zielort eingeben");
@@ -25,6 +27,10 @@ var aeria;
         searchScreen.appendChild(search);
         searchScreen.appendChild(searchButton);
         document.getElementById("background").appendChild(searchScreen);
+        document.getElementsByTagName("button")[0].addEventListener("click", resultScreen);
+    }
+    function resultScreen() {
+        document.getElementById("searchScreen").style.display = "none";
     }
 })(aeria || (aeria = {}));
 //# sourceMappingURL=aeria.js.map
