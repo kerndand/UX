@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+/* Font */
+@font-face {
+	font-family: ITCEras;
+	src: url(ERASLGHT.woff);
+}
+
+/* Background Image */
 html, body {
 	height: 100%;
 	margin: 0;
@@ -11,4 +18,60 @@ html, body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+/* Loading Screen */
+#loadingScreen {
+	position: relative;
+	top: 225px;
+	text-align: center;
+	color: #162b89;
+}
+
+#loadingScreen>p {
+	font-size: 8em;
+	font-family: "ITCEras";
+	margin: 0;
+	padding: 0;
+}
+
+#loadingScreen>p+p {
+	font-size: 1.75em;
+	font-family: "ITCEras";
+	margin: 0;
+	padding: 0;
+}
+
+/* Search Screen */
+#searchScreen {
+	position: relative;
+	top: 300px;
+	text-align: center;
+	color: #162b89;
+}
+
+#searchScreen input {
+	padding: 10px;
+	width: 40%;
+	font-family: "ITCEras";
+	font-size: 3em;
+	color: #162b89;
+	border: 1px solid grey;
+}
+
+#searchScreen button {
+	width: 10%;
+	padding-top: 5px;
+	padding-bottom: 12px;
+	font-size: 3em;
+	background: #2196F3;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border: 1px solid grey;
+	border-left: none;
+}
+
+#searchScreen button:hover {
+	background-color: #162b89;	
 }
