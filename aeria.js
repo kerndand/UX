@@ -19,7 +19,7 @@ var aeria;
         search.setAttribute("placeholder", "Zielort eingeben");
         search.setAttribute("name", "search");
         let searchButton = document.createElement("button");
-        searchButton.innerHTML = "<i" + " class=" + "'fa fa-search fa'" + "></i>";
+        searchButton.innerHTML = "<i" + " class=" + "'fa fa-search fa-3x'" + "></i>";
         let searchScreen = document.createElement("div");
         searchScreen.setAttribute("id", "searchScreen");
         searchScreen.appendChild(search);

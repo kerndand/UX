@@ -23,7 +23,7 @@ namespace aeria {
         search.setAttribute("name", "search");
 
         let searchButton: HTMLButtonElement = document.createElement("button");
-        searchButton.innerHTML = "<i" + " class=" + "'fa fa-search fa'" + "></i>";
+        searchButton.innerHTML = "<i" + " class=" + "'fa fa-search fa-3x'" + "></i>";
 
         let searchScreen: HTMLDivElement = document.createElement("div");
         searchScreen.setAttribute("id", "searchScreen");
