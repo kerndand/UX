@@ -10,10 +10,12 @@
 html, body {
 	height: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 #background {
 	background-image: url("full_hd.jpg");
+	width: 100%;
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -27,19 +29,21 @@ html, body {
 	padding: 0;
 	text-align: center;
 	color: white;
+	width: 100%;
 }
 
-@media screen and (min-width: 35.625em) {
+
 /* Loading Screen */
 #loadingScreen {
-	width: 100%;
-	position: relative;
-	top: 225px;
+	position: absolute;
+	top: 30%;
 	text-align: center;
 	color: #162b89;
+	width: 100%;
 }
 
 #loadingScreen>p {
+	width: 100%;
 	font-size: 8em;
 	font-family: "ITCEras";
 	margin: 0;
@@ -51,42 +55,39 @@ html, body {
 	font-family: "ITCEras";
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 /* Search Screen */
 #searchScreen {
-	width: 100%;
 	position: relative;
 	top: 250px;
 	color: #162b89;
-	margin: auto;
-	max-width: 500px;
 }
 
 #searchScreen input {
-	padding: 10px;
-	width: 100%;
+	display: block;
+	padding: 1%;
+	width: 95%;
+	margin: auto;
+	border: 1px solid white;
 	font-family: "ITCEras";
 	font-size: 25px;
 	color: #162b89;
-	border: 1px solid white;
 	background: none;
 }
 
 #searchScreen button {
-	width: 100%;
 	position: relative;
 	top: 30px;
-	left: 47.5%;
 	padding: 0;
 	color: #162b89;
 	border: none;
 	cursor: pointer;
 	background: none;
+	width: 100%;
 }
 
 #searchScreen button:hover {
-	color: #0aa3f5;
-}
-	
+	color: #0aa3f5;	
 }
