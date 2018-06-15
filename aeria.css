@@ -60,6 +60,8 @@ html, body {
 
 /* Search Screen */
 #searchScreen {
+	position: relative;
+	top: 20%;
 	color: #162b89;
 }
 
