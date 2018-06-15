@@ -29,8 +29,10 @@ html, body {
 	color: white;
 }
 
+@media screen and (min-width: 35.625em) {
 /* Loading Screen */
 #loadingScreen {
+	width: 100%;
 	position: relative;
 	top: 225px;
 	text-align: center;
@@ -53,6 +55,7 @@ html, body {
 
 /* Search Screen */
 #searchScreen {
+	width: 100%;
 	position: relative;
 	top: 250px;
 	color: #162b89;
@@ -71,6 +74,7 @@ html, body {
 }
 
 #searchScreen button {
+	width: 100%;
 	position: relative;
 	top: 30px;
 	left: 47.5%;
@@ -84,9 +88,5 @@ html, body {
 #searchScreen button:hover {
 	color: #0aa3f5;
 }
-
-@media screen and (min-width: 35.625em) {
-	#loadingScreen {
-		top: 500px;
-	}
+	
 }
