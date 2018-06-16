@@ -93,8 +93,8 @@ html, body {
 
 /* Result Screen */
 #resultScreen {
-	text-align : center;
-	color: #162b89;
+	text-align: center;
+	color: white;
 	width: 100%;
 	text-align: center;
 }
@@ -105,5 +105,46 @@ html, body {
 	width: 90%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	
+}
+
+#resultScreen>span {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+
+#resultScreen>span+span {
+	position: absolute;
+	top: 50%;
+	left: 60%;
+}
+
+span:hover {
+	cursor: pointer;
+	color: #0aa3f5;
+}
+
+/* Place Screen */
+#placeDiv {
+	display: block;
+	text-align: center;
+	font-family: "ITCEras";
+	color: #162b89;
+	width: 100%;
+	font-size: 1.5em;
+	position: absolute;
+	top: 25%;
+}
+
+#placeDiv button {
+	color: #162b89;
+	border: none;
+	cursor: pointer;
+	background: none;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#placeDiv button:hover {
+	color: #0aa3f5;	
 }

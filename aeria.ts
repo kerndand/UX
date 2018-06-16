@@ -40,19 +40,71 @@ namespace aeria {
 
     function resultScreen(): void {
         let input: HTMLInputElement = <HTMLInputElement>document.getElementById("search");
-        
+        let clickCounter: number = 0;
         if (input.value == "Porto" || input.value == "porto") {
             document.getElementById("searchScreen").style.display = "none";
+
             let map: HTMLImageElement = document.createElement("img");
             map.setAttribute("src", "Karte.png");
-            
+
             let resultScreen: HTMLDivElement = document.createElement("div");
             resultScreen.setAttribute("id", "resultScreen");
+            resultScreen.innerHTML = "<span" + " class=" + "'fa fa-map-marker fa-2x'" + "></span>";
+            resultScreen.innerHTML += "<span" + " class=" + "'fa fa-map-marker fa-2x'" + "></span>";
             resultScreen.appendChild(map);
-            
-            document.getElementById("background").appendChild(resultScreen); 
+
+            document.getElementById("background").appendChild(resultScreen);
+
+            let icon: NodeListOf<HTMLSpanElement> = document.getElementsByTagName("span");
+
+            if (clickCounter = 0) {
+                clickCounter++;
+                icon[0].addEventListener("click", placeScreen);
+            } else {
+                icon[0].addEventListener("click", place);    
+            }
+    
         } else {
-            alert("Diesen Ort gibt es leider in diesem Prototypen nicht. Bitte versuchen Sie es erneut!");       
+            alert("Diesen Ort gibt es leider in diesem Prototypen nicht. Bitte versuchen Sie es erneut!");
+        }
+
+        function placeScreen(): void {
+
+            document.getElementById("resultScreen").style.display = "none";
+            let placeDiv: HTMLDivElement = document.createElement("div");
+            placeDiv.setAttribute("id", "placeDiv");
+            placeDiv.innerHTML = "<p>Av. do Brasil 816</p>";
+            placeDiv.innerHTML += "<p>4150-154 Porto</p>";
+            placeDiv.innerHTML += "<p>Portugal</p>";
+
+            let cancelButton: HTMLButtonElement = document.createElement("button");
+            cancelButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-left fa-2x'" + "></i>";
+
+            let confirmButton: HTMLButtonElement = document.createElement("button");
+            confirmButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-right fa-2x'" + "></i>";
+
+            placeDiv.appendChild(cancelButton);
+            placeDiv.appendChild(confirmButton);
+
+            cancelButton.addEventListener("click", cancelPlace);
+            confirmButton.addEventListener("click", confirmPlace);
+
+            document.getElementById("background").appendChild(placeDiv);
+
+        }
+        
+        function place(): void {
+            document.getElementById("resultScreen").style.display = "none";
+            document.getElementById("placeDiv").style.display = "block";     
+        }
+
+        function cancelPlace(): void {
+            document.getElementById("resultScreen").style.display = "block";
+            document.getElementById("placeDiv").style.display = "none";
+        }
+
+        function confirmPlace(): void {
+            document.getElementById("placeDiv").style.display = "none";
         }
     }
 
