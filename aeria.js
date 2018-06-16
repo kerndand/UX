@@ -20,6 +20,7 @@ var aeria;
         search.setAttribute("type", "text");
         search.setAttribute("placeholder", "Zielort eingeben");
         search.setAttribute("name", "search");
+        search.setAttribute("id", "search");
         let searchButton = document.createElement("button");
         searchButton.innerHTML = "<i" + " class=" + "'fa fa-search fa-3x'" + "></i>";
         let searchScreen = document.createElement("div");
@@ -30,7 +31,19 @@ var aeria;
         document.getElementsByTagName("button")[0].addEventListener("click", resultScreen);
     }
     function resultScreen() {
-        document.getElementById("searchScreen").style.display = "none";
+        let input = document.getElementById("search");
+        if (input.value == "Porto" || input.value == "porto") {
+            document.getElementById("searchScreen").style.display = "none";
+            let map = document.createElement("img");
+            map.setAttribute("src", "map.png");
+            let resultScreen = document.createElement("div");
+            resultScreen.setAttribute("id", "resultScreen");
+            resultScreen.appendChild(map);
+            document.getElementById("background").appendChild(resultScreen);
+        }
+        else {
+            alert("Diesen Ort gibt es leider in diesem Prototypen nicht. Bitte versuchen Sie es erneut!");
+        }
     }
 })(aeria || (aeria = {}));
 //# sourceMappingURL=aeria.js.map
