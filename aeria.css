@@ -36,7 +36,7 @@ html, body {
 /* Loading Screen */
 #loadingScreen {
 	position: absolute;
-	top: 30%;
+	top: 25%;
 	text-align: center;
 	color: #162b89;
 	width: 100%;
@@ -44,14 +44,14 @@ html, body {
 
 #loadingScreen>p {
 	width: 100%;
-	font-size: 8em;
+	font-size: 7em;
 	font-family: "ITCEras";
 	margin: 0;
 	padding: 0;
 }
 
 #loadingScreen>p+p {
-	font-size: 1.75em;
+	font-size: 1.55em;
 	font-family: "ITCEras";
 	margin: 0;
 	padding: 0;
@@ -103,6 +103,6 @@ html, body {
 #resultScreen img{
 	display: block;
 	margin: auto;
-	width: 50%;
+	width: 95%;
 	
 }
