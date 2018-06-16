@@ -91,7 +91,7 @@ namespace aeria {
             infoScreen.innerHTML += "<span" + " class=" + "'fa fa-low-vision fa-2x'" + "></span>" + "<p>Klare Sicht, ca. 7,2km</p>";
             infoScreen.innerHTML += "<span" + " class=" + "'material-icons'" + ">beach_access</span>" + "<p>Wahrscheinlichkeit 45%, Menge 5mm</p>";
             infoScreen.innerHTML += "<span" + " class=" + "'glyphicon glyphicon-tint'" + "></span>" + "<p>92%</p>";
-            infoScreen.innerHTML += "<i" + " class=" + "'fa fa-square-o fa-2x'" + "><p> Anf&aumlnger</p></i>" + " <i" + " class=" + "'fa fa-check-square-o fa-2x'" + "><p> Fortgeschrittener</p></i>" + " <i" + " class=" + "'fa fa-check-square-o fa-2x'" + "><p> Profi</p></i>" ;
+            infoScreen.innerHTML += "<i" + " class=" + "'fa fa-square-o fa'" + "><p> Anf&aumlnger</p></i>" + " <i" + " class=" + "'fa fa-check-square-o'" + "><p> Fortgeschrittener</p></i>" + " <i" + " class=" + "'fa fa-check-square-o'" + "><p> Profi</p></i>" ;
 
             document.getElementById("background").appendChild(infoScreen);
         }
