@@ -171,3 +171,10 @@ html, body {
 	display: inline;
 	font-family: "ITCEras";
 }
+
+#infoScreen h3{
+	font-family: "ITCEras";
+	color: white;
+	border-bottom: 1px solid white;
+	
+}
