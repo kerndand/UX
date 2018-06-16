@@ -64,6 +64,14 @@ var aeria;
         function infoScreen() {
             document.getElementById("placeDiv").style.display = "none";
             let infoScreen = document.createElement("div");
+            infoScreen.setAttribute("id", "infoScreen");
+            infoScreen.innerHTML = "<span" + " class=" + "'fa fa-tachometer fa-2x'" + "></span>" + "<p> 4Bft (11 - 16 kn)</p>";
+            infoScreen.innerHTML += "<span" + " class=" + "'fa fa-compass fa-2x'" + "></span>" + "<p> Off - Shore (Ablandiger Wind)</p>";
+            infoScreen.innerHTML += "<span" + " class=" + "'fa fa-cloud fa-2x'" + "></span>" + "<p> Heiter mit leichten B&oumlhen, 25&degC</p>";
+            infoScreen.innerHTML += "<span" + " class=" + "'fa fa-low-vision fa-2x'" + "></span>" + "<p>Klare Sicht, ca. 7,2km</p>";
+            infoScreen.innerHTML += "<span" + " class=" + "'material-icons'" + ">beach_access</span>" + "<p>Wahrscheinlichkeit 45%, Menge 5mm</p>";
+            infoScreen.innerHTML += "<span" + " class=" + "'glyphicon glyphicon-tint'" + "></span>" + "<p>92%</p>";
+            document.getElementById("background").appendChild(infoScreen);
         }
     }
 })(aeria || (aeria = {}));
