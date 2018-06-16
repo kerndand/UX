@@ -35,7 +35,7 @@ var aeria;
         if (input.value == "Porto" || input.value == "porto") {
             document.getElementById("searchScreen").style.display = "none";
             let map = document.createElement("img");
-            map.setAttribute("src", "map.png");
+            map.setAttribute("src", "Karte.png");
             let resultScreen = document.createElement("div");
             resultScreen.setAttribute("id", "resultScreen");
             resultScreen.appendChild(map);
