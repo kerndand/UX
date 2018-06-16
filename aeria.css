@@ -93,8 +93,6 @@ html, body {
 
 /* Result Screen */
 #resultScreen {
-	position: relative;
-	top: 5%;
 	text-align : center;
 	color: #162b89;
 	width: 100%;
@@ -105,6 +103,7 @@ html, body {
 	display: block;
 	margin: auto;
 	width: 95%;
-	padding-bottom: 5%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
 	
 }
