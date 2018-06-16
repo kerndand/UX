@@ -32,7 +32,6 @@ html, body {
 	width: 100%;
 }
 
-
 /* Loading Screen */
 #loadingScreen {
 	position: absolute;
@@ -89,20 +88,19 @@ html, body {
 }
 
 #searchScreen button:hover {
-	color: #0aa3f5;	
+	color: #0aa3f5;
 }
 
 #resultScreen {
-	position: absolute;
-	top: 15%;
-	text-align: center;
+	text-align : center;
 	color: #162b89;
 	width: 100%;
+	text-align: center;
 }
 
-#resultScreen img{
+#resultScreen img {
 	display: block;
 	margin: auto;
 	width: 95%;
-	
+	height: 95%;
 }
