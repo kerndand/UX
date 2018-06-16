@@ -40,7 +40,7 @@ namespace aeria {
 
     function resultScreen(): void {
         let input: HTMLInputElement = <HTMLInputElement>document.getElementById("search");
-        let clickCounter: number = 0;
+
         if (input.value == "Porto" || input.value == "porto") {
             document.getElementById("searchScreen").style.display = "none";
 
@@ -57,13 +57,7 @@ namespace aeria {
 
             let icon: NodeListOf<HTMLSpanElement> = document.getElementsByTagName("span");
 
-            if (clickCounter = 0) {
-                clickCounter++;
-                icon[0].addEventListener("click", placeScreen);
-            } else {
-                icon[0].addEventListener("click", place);    
-            }
-    
+            icon[0].addEventListener("click", placeScreen);
         } else {
             alert("Diesen Ort gibt es leider in diesem Prototypen nicht. Bitte versuchen Sie es erneut!");
         }
@@ -77,34 +71,20 @@ namespace aeria {
             placeDiv.innerHTML += "<p>4150-154 Porto</p>";
             placeDiv.innerHTML += "<p>Portugal</p>";
 
-            let cancelButton: HTMLButtonElement = document.createElement("button");
-            cancelButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-left fa-2x'" + "></i>";
-
-            let confirmButton: HTMLButtonElement = document.createElement("button");
-            confirmButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-right fa-2x'" + "></i>";
-
-            placeDiv.appendChild(cancelButton);
-            placeDiv.appendChild(confirmButton);
-
-            cancelButton.addEventListener("click", cancelPlace);
-            confirmButton.addEventListener("click", confirmPlace);
-
+            let infoButton: HTMLButtonElement = document.createElement("button");
+            infoButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-right fa-2x'" + "></i>";
+            placeDiv.appendChild(infoButton);
+            
+            infoButton.addEventListener("click", infoScreen);
             document.getElementById("background").appendChild(placeDiv);
-
-        }
-        
-        function place(): void {
-            document.getElementById("resultScreen").style.display = "none";
-            document.getElementById("placeDiv").style.display = "block";     
         }
 
-        function cancelPlace(): void {
-            document.getElementById("resultScreen").style.display = "block";
+
+        function infoScreen(): void {
             document.getElementById("placeDiv").style.display = "none";
-        }
+            
+            let infoScreen: HTMLDivElement = document.createElement("div");
 
-        function confirmPlace(): void {
-            document.getElementById("placeDiv").style.display = "none";
         }
     }
 

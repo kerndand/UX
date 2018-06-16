@@ -32,7 +32,6 @@ var aeria;
     }
     function resultScreen() {
         let input = document.getElementById("search");
-        let clickCounter = 0;
         if (input.value == "Porto" || input.value == "porto") {
             document.getElementById("searchScreen").style.display = "none";
             let map = document.createElement("img");
@@ -44,13 +43,7 @@ var aeria;
             resultScreen.appendChild(map);
             document.getElementById("background").appendChild(resultScreen);
             let icon = document.getElementsByTagName("span");
-            if (clickCounter = 0) {
-                clickCounter++;
-                icon[0].addEventListener("click", placeScreen);
-            }
-            else {
-                icon[0].addEventListener("click", place);
-            }
+            icon[0].addEventListener("click", placeScreen);
         }
         else {
             alert("Diesen Ort gibt es leider in diesem Prototypen nicht. Bitte versuchen Sie es erneut!");
@@ -62,26 +55,15 @@ var aeria;
             placeDiv.innerHTML = "<p>Av. do Brasil 816</p>";
             placeDiv.innerHTML += "<p>4150-154 Porto</p>";
             placeDiv.innerHTML += "<p>Portugal</p>";
-            let cancelButton = document.createElement("button");
-            cancelButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-left fa-2x'" + "></i>";
-            let confirmButton = document.createElement("button");
-            confirmButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-right fa-2x'" + "></i>";
-            placeDiv.appendChild(cancelButton);
-            placeDiv.appendChild(confirmButton);
-            cancelButton.addEventListener("click", cancelPlace);
-            confirmButton.addEventListener("click", confirmPlace);
+            let infoButton = document.createElement("button");
+            infoButton.innerHTML = "<i" + " class=" + "'fa fa-chevron-right fa-2x'" + "></i>";
+            placeDiv.appendChild(infoButton);
+            infoButton.addEventListener("click", infoScreen);
             document.getElementById("background").appendChild(placeDiv);
         }
-        function place() {
-            document.getElementById("resultScreen").style.display = "none";
-            document.getElementById("placeDiv").style.display = "block";
-        }
-        function cancelPlace() {
-            document.getElementById("resultScreen").style.display = "block";
+        function infoScreen() {
             document.getElementById("placeDiv").style.display = "none";
-        }
-        function confirmPlace() {
-            document.getElementById("placeDiv").style.display = "none";
+            let infoScreen = document.createElement("div");
         }
     }
 })(aeria || (aeria = {}));
