@@ -119,11 +119,24 @@ html, body {
 	left: 60%;
 }
 
+
 #resultScreen span:hover {
 	cursor: pointer;
 	color: #0aa3f5;
 }
 
+#resultScreen button {
+	position: absolute;
+	left: 5%;
+	top: 4.5%;
+	background: none;
+	border: none;
+}
+
+#resultScreen button:hover {
+	cursor: pointer;
+	color: #0aa3f5;
+}
 /* Place Screen */
 #placeDiv {
 	display: block;
@@ -136,17 +149,28 @@ html, body {
 	top: 25%;
 }
 
-#placeDiv button {
+#info {
 	color: #162b89;
 	border: none;
 	cursor: pointer;
 	background: none;
 	padding-left: 25px;
 	padding-right: 25px;
+	font-size: 1.5em;
 }
 
 #placeDiv button:hover {
 	color: #0aa3f5;	
+}
+
+#back {
+	position: absolute;
+	left: 5%;
+	top: -57%;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.35em;
 }
 
 /* Info Screen */
@@ -176,5 +200,19 @@ html, body {
 	font-family: "ITCEras";
 	color: white;
 	border-bottom: 1px solid white;
-	
 }
+
+#infoScreen button {
+	position: absolute;
+	left: 5%;
+	top: -10%;
+	background: none;
+	border: none;
+	font-size: 2em;
+	color: white;
+}
+
+#infoScreen button:hover {
+	color: #0aa3f5;	
+}
+
