@@ -126,9 +126,9 @@ html, body {
 }
 
 #resultScreen button {
-	position: absolute;
+	position: fixed;
 	left: 5%;
-	top: 4.5%;
+	top: 4.75%;
 	background: none;
 	border: none;
 }
@@ -164,9 +164,9 @@ html, body {
 }
 
 #back {
-	position: absolute;
+	position: fixed;
 	left: 5%;
-	top: -60%;
+	top: 3.5%;
 	background: none;
 	border: none;
 	color: white;
@@ -203,9 +203,9 @@ html, body {
 }
 
 #infoScreen button {
-	position: absolute;
+	position: fixed;
 	left: 5%;
-	top: -10%;
+	top: 3.5%;
 	background: none;
 	border: none;
 	font-size: 2em;
