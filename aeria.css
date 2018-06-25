@@ -73,7 +73,7 @@ html, body {
 	font-family: "ITCEras";
 	font-size: 25px;
 	color: #162b89;
-	background: none;
+	background: white;
 }
 
 #searchScreen button {
@@ -200,6 +200,7 @@ html, body {
 	font-family: "ITCEras";
 	color: white;
 	border-bottom: 1px solid white;
+	font-weight: 900;
 }
 
 #infoScreen button {
